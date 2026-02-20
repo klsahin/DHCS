@@ -11,6 +11,7 @@ var clickHandler = function (event) {
 // =================== Stuff to do when the page loads ================================
 // This function will be run when the page finishes loading, which is good practice to ensure that everything is in-place before you start requesting access to particular elements. This is a good place to put any code that refers to elements defined by the HTML (e.g. making new elements and adding them as children, and/or attaching event listeners).
 window.onload = function () {
+    
     // HEADER SECTION
     const header = document.getElementById("main"); // adding the Rate These Colors! header
     
