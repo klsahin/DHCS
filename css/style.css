@@ -1,0 +1,61 @@
+* {
+	box-sizing: border-box;
+}
+
+/* The "flex-container-column" and "flex-container-row" classes will make the item a flexbox parent, so its children will be laid out using the flexbox algorithm (https://css-tricks.com/snippets/css/a-guide-to-flexbox/). The "column" variant will arrange the children vertically, and the "row" variant will arrange the children horizontally.*/
+.flex-container-column, .flex-container-row { 
+	padding: 0px;
+	margin: 0px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-container-column {
+	flex-direction: column;
+}
+
+.flex-container-row { 
+	flex-direction: row;
+}
+
+.flex-container-column *, .flex-container-row * { 
+	display: flex;  /* changing this from display: block to display: flex makes it into a grid (actual rows!)*/
+}
+
+/* The "wrap" class will, if used with one of the flex-container classes (such as: <div class="flex-container-column wrap">) will let the chilren wrap around. (You're most likely to want this if you are doing the "Ratings Gallery" assignment variant.)*/
+.wrap {
+	flex-wrap: wrap;
+}
+
+/* "outline" adds a 1-pixel black outline around the element. */
+.outline {
+	outline: 1px black solid;
+}
+
+/* "no-padding" removes any padding around the element. */
+.no-padding {
+	padding: 0px;
+}
+
+/* "fancy" makes the text in the element cursive, and it adds sparkles before and after the element. */
+.fancy {
+	font-family: "Lucinda", Lucinda, cursive;
+}
+
+.fancy:before , .fancy:after {
+	content: "✨";
+}
+
+/* "color-inverted" makes the background of the element black, and the text white. */
+.color-inverted {
+	background: black;
+	color: white;
+}
+
+/* "color-normal" makes the background of the element white and the text black. Yes, this is the default; because children inherit styles from their parents, you might want this to "reset" a child element if it has a parent with the inverted colors. */
+.color-normal {
+	background: white;
+	color: black;
+}
